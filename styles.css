@@ -1,0 +1,88 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --main-color: rgb(255, 47, 0);
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+    margin: 50px auto;
+    max-width: 700px;
+    text-align: center;
+}
+@media (max-width: 767px) {
+    .container {
+        margin: 0 auto;
+        width: 100vw;
+        min-height: 100vh;
+        background-color: #eee;
+    }
+}
+.container .form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 30px;
+    background-color: #ddd;
+}
+.container .form .username {
+    padding: 10px 20px;
+    flex: 1;
+    border: none;
+}
+.container .form .username:focus {
+    outline: none;
+    border: 1px solid var(--main-color);
+    caret-color: var(--main-color);
+}
+.container .form .username:focus::placeholder {
+    color: var(--main-color);
+}
+.container .form .button {
+    color: white;
+    background-color: var(--main-color);
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.container .result  {
+    background-color: #eee;
+    padding: 30px;
+}
+.container .result > div {
+    background-color: white;
+    box-shadow: 2px 2px 0 white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 20px;
+    border-radius: 5px;
+}
+.container .result > div:not(:last-child) {
+    margin-bottom: 20px;
+}
+.container .result > div > div {
+    flex: 1;
+    text-align: left;
+}
+.container .result > div > a,
+.container .result > div > span {
+    display: block;
+    padding: 5px 8px;
+    color: white;
+    border-radius: 5px;
+    width: 90px;
+}
+.container .result > div > a {
+    text-decoration: none;
+    cursor: pointer;
+    background-color: rgb(221, 0, 255);
+}
+.container .result > div > span {
+    background-color: rgb(0, 135, 0);
+}
